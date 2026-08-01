@@ -1,20 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreManager : MonoBehaviour
+public static class ScoreManager
 {
-    public static int Pontos { get; private set; } = 0;
+    private const string CHAVE_PONTOS = "PontosSalvos";
+
+    public static int Pontos
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(CHAVE_PONTOS, 0);
+        }
+    }
 
     public static void AdicionarPontos(int qtd)
     {
-        Pontos += qtd;
-        Debug.Log($"Pontos: {Pontos}");
+        int novosPontos = Pontos + qtd;
+
+        if (novosPontos < 0) novosPontos = 0;
+
+        PlayerPrefs.SetInt(CHAVE_PONTOS, novosPontos);
+        PlayerPrefs.Save();
+
+        Debug.Log($"Pontos atualizados: {novosPontos}");
     }
 
     public static void ResetarPontos()
     {
-        Pontos = 0;
-        Debug.Log($"Pontos resetados: {Pontos}");
+        PlayerPrefs.SetInt(CHAVE_PONTOS, 0);
+        PlayerPrefs.Save();
+
+        Debug.Log("Pontos resetados.");
     }
 }

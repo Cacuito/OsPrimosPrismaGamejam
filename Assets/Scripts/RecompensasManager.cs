@@ -8,6 +8,8 @@ public class RecompensasManager : MonoBehaviour
 {
     public TextMeshProUGUI pontosText;
 
+    public TextMeshProUGUI[] itemTexts;
+
 
     [System.Serializable]
     public struct Item
@@ -27,7 +29,13 @@ public class RecompensasManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        for(int i = 0; i < items.Length; i++)
+        {
+            if (itemTexts != null && i < itemTexts.Length)
+            {
+                itemTexts[i].text = $"{items[i].name} - Custo: {items[i].custo}";
+            }
+        }
     }
 
     // Update is called once per frame
@@ -44,16 +52,18 @@ public class RecompensasManager : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
-    public void ComprarItem(Item item)
+    public bool ComprarItem(Item item)
     {
         if (ScoreManager.Pontos >= item.custo)
         {
             ScoreManager.AdicionarPontos(-item.custo);
             Debug.Log($"Item {item.name} comprado por {item.custo} pontos.");
+            return true;
         }
         else
         {
             Debug.Log($"Pontos insuficientes para comprar {item.name}. Custo: {item.custo}, Pontos: {ScoreManager.Pontos}");
+            return false;
         }
     }
 
