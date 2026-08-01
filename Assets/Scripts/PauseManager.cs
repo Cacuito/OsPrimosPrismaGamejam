@@ -49,7 +49,7 @@ public class PauseManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Menuinicial");
     }
 
-    public void voltarMundo()
+    public void VoltarMundo()
     {
         Time.timeScale = 1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
