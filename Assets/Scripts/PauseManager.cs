@@ -6,6 +6,8 @@ public class PauseManager : MonoBehaviour
 {
     [Header("Interface")]
     public GameObject painelDePause;
+    [SerializeField] private GameObject pause;
+    [SerializeField] private GameObject config;
 
     private bool jogoPausado = false;
 
@@ -53,5 +55,17 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
+    }
+
+    public void AbrirConfig()
+    {
+        pause.SetActive(false);
+        config.SetActive(true);
+    }
+
+    public void SairConfig()
+    {
+        pause.SetActive(true);
+        config.SetActive(false);
     }
 }

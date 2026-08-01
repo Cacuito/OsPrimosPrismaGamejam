@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: VoltarMundo
       objectReference: {fileID: 0}
+    - target: {fileID: 718281019150040414, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2590128858774662941, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
       propertyPath: m_SizeDelta.x
       value: 400
@@ -218,13 +222,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4039107273998176179, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4778330111038777571, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
       propertyPath: m_Name
       value: CanvasPause
       objectReference: {fileID: 0}
+    - target: {fileID: 4778330111038777571, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4877971308930674403, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
       propertyPath: m_text
       value: Sair da barraca
+      objectReference: {fileID: 0}
+    - target: {fileID: 5496511457873803793, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

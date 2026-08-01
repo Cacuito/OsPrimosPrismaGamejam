@@ -337,6 +337,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &354160972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5496511457873803793, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
+  m_PrefabInstance: {fileID: 4982405078240963414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &365322450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,6 +1238,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &998535893 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1945745021055125634, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
+  m_PrefabInstance: {fileID: 4982405078240963414}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf257a77fc72949e98e760a54a2e19b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1004306699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,7 +1605,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f4a3292982196940b85e701358ca437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  space: {fileID: 0}
   speed: 5
 --- !u!60 &1059017511
 PolygonCollider2D:
@@ -2981,14 +2996,30 @@ PrefabInstance:
     - target: {fileID: 708778616456052938, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 998535893}
+    - target: {fileID: 708778616456052938, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: voltarMenu
       objectReference: {fileID: 0}
     - target: {fileID: 1853804048870363617, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 998535893}
+    - target: {fileID: 1853804048870363617, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Despausar
       objectReference: {fileID: 0}
+    - target: {fileID: 1945745021055125634, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
+      propertyPath: painelDePause
+      value: 
+      objectReference: {fileID: 354160972}
     - target: {fileID: 3669988445389403365, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 998535893}
+    - target: {fileID: 3669988445389403365, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AbrirConfig
       objectReference: {fileID: 0}
     - target: {fileID: 3833858238210341162, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
       propertyPath: m_Pivot.x
@@ -3074,6 +3105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasPause
       objectReference: {fileID: 0}
+    - target: {fileID: 5496511457873803793, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3092,3 +3127,4 @@ SceneRoots:
   - {fileID: 572082189}
   - {fileID: 4982405078240963414}
   - {fileID: 2126482290}
+  - {fileID: 1717462060}
