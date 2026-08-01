@@ -8,6 +8,8 @@ public class Menu : MonoBehaviour
 {
 
     [SerializeField] private Button botaoContinuar;
+    [SerializeField] private GameObject menu;
+    [SerializeField] private GameObject config;
 
     // Start is called before the first frame update
     void Start()
@@ -42,5 +44,17 @@ public class Menu : MonoBehaviour
     public void SairJogo()
     {
         Application.Quit();
+    }
+
+    public void AbrirConfig()
+    {
+        menu.SetActive(false);
+        config.SetActive(true);
+    }
+
+    public void FecharConfig()
+    {
+        menu.SetActive(true);
+        config.SetActive(false);
     }
 }
