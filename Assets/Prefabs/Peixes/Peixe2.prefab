@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 15
   ladoDireita: 1
+  podeMover: 1
 --- !u!50 &-2756561547065500914
 Rigidbody2D:
   serializedVersion: 4
