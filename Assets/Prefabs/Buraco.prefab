@@ -213,7 +213,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_SortAtRoot: 0
 --- !u!1 &6843292087665924796
 GameObject:
@@ -403,6 +403,7 @@ MonoBehaviour:
   goblinHitado: {fileID: 21300000, guid: 72e5c356026830549b124a9cefea871f, type: 3}
   goblin2Hitado: {fileID: 21300000, guid: 0d99f59651bcb0543b96e49417bcc851, type: 3}
   bombaSprite: {fileID: 21300000, guid: 06e0f6a8bd6d8e04dabb890ba325353a, type: 3}
+  pontoPorGoblin: 5
 --- !u!61 &7277666410321746316
 BoxCollider2D:
   m_ObjectHideFlags: 0

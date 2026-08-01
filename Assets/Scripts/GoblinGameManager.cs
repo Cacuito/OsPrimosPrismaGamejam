@@ -15,7 +15,7 @@ public class GoblinGameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private TextMeshProUGUI scoreText;
 
-    private float startingTime = 30f;
+    public float startingTime = 30f;
     private float timeRemaining;
     private HashSet<GoblinScript> currentGoblins = new HashSet<GoblinScript>();
     private bool playing = false;
