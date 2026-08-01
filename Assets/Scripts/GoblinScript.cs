@@ -27,6 +27,8 @@ public class GoblinScript : MonoBehaviour
 
     private bool hittable = true;
 
+    public int pontoPorGoblin = 5;
+
     public enum GoblinType
     {
         Goblin1,
@@ -76,7 +78,7 @@ public class GoblinScript : MonoBehaviour
                     spriteRenderer.sprite = goblinHitado;
                     StopAllCoroutines();
                     hittable = false;
-                    gameManager.AddScore(goblinIndex);
+                    gameManager.AddScore(goblinIndex, pontoPorGoblin);
                     StartCoroutine(QuickHide());
                     break;
 
@@ -91,7 +93,7 @@ public class GoblinScript : MonoBehaviour
                         spriteRenderer.sprite = goblin2Hitado;
                         StopAllCoroutines();
                         hittable = false;
-                        gameManager.AddScore(goblinIndex);
+                        gameManager.AddScore(goblinIndex, pontoPorGoblin * 2);
                         StartCoroutine(QuickHide());
                     }
                     break;
@@ -155,16 +157,22 @@ public class GoblinScript : MonoBehaviour
 
     public void Hide()
     {
-        transform.localPosition = startPosition;
-        boxCollider2D.offset = boxOffsetHidden;
-        boxCollider2D.size = boxSizeHidden;
+        StopGame();
     }
 
     public void StopGame()
     {
-        hittable = false;
         StopAllCoroutines();
-        Hide();
+
+        hittable = false;
+
+        transform.localPosition = startPosition;
+
+        if (boxCollider2D != null)
+        {
+            boxCollider2D.offset = boxOffsetHidden;
+            boxCollider2D.size = boxSizeHidden;
+        }
     }
 
     private void CreateNext()

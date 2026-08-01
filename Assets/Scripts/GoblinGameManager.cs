@@ -1,6 +1,7 @@
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GoblinGameManager : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class GoblinGameManager : MonoBehaviour
     private HashSet<GoblinScript> currentGoblins = new HashSet<GoblinScript>();
     private bool playing = false;
 
+    // Guarda apenas os acertos desta partida específica para controlar a dificuldade
+    private int scoreNaRodada = 0;
+
     void Start()
     {
         if (scoreText != null)
@@ -29,25 +33,32 @@ public class GoblinGameManager : MonoBehaviour
 
     public void StartGame()
     {
+        playing = false;
+
+        // Reset da pontuação da rodada atual
+        scoreNaRodada = 0;
+
+        for (int i = 0; i < goblins.Count; i++)
+        {
+            goblins[i].StopGame();
+            goblins[i].SetIndex(i);
+        }
+
+        currentGoblins.Clear();
+
         playButton.SetActive(false);
         outOfTimeText.SetActive(false);
         bombText.SetActive(false);
         gameUI.SetActive(true);
 
-        for (int i = 0; i < goblins.Count; i++)
-        {
-            goblins[i].Hide();
-            goblins[i].SetIndex(i);
-        }
-
-        currentGoblins.Clear();
         timeRemaining = startingTime;
-        playing = true;
 
         if (scoreText != null)
         {
             scoreText.text = $"{ScoreManager.Pontos}";
         }
+
+        playing = true;
     }
 
     public void GameOver(int type)
@@ -86,23 +97,28 @@ public class GoblinGameManager : MonoBehaviour
                 timeText.text = $"{(int)timeRemaining / 60}:{(int)timeRemaining % 60:D2}";
             }
 
-            int nivel = ScoreManager.Pontos / 10;
+            // A quantidade de goblins em tela agora sobe gradualmente conforme você joga A RODADA
+            int nivelDificuldade = scoreNaRodada / 10;
 
-            if (currentGoblins.Count <= nivel)
+            if (currentGoblins.Count <= nivelDificuldade)
             {
                 int index = Random.Range(0, goblins.Count);
                 if (!currentGoblins.Contains(goblins[index]))
                 {
                     currentGoblins.Add(goblins[index]);
-                    goblins[index].Activate(nivel, this);
+                    goblins[index].Activate(nivelDificuldade, this);
                 }
             }
         }
     }
 
-    public void AddScore(int goblinIndex)
+    public void AddScore(int goblinIndex, int pontosPerGoblin)
     {
-        ScoreManager.AdicionarPontos(1);
+        // 1. Aumenta a pontuação salva no PlayerPrefs
+        ScoreManager.AdicionarPontos(pontosPerGoblin);
+
+        // 2. Aumenta a pontuação da rodada interna
+        scoreNaRodada++;
 
         if (scoreText != null)
         {
@@ -121,5 +137,10 @@ public class GoblinGameManager : MonoBehaviour
         }
 
         currentGoblins.Remove(goblins[goblinIndex]);
+    }
+
+    public void SairFase()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 }
