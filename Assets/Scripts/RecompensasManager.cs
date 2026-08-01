@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class RecompensasManager : MonoBehaviour
 {
     public TextMeshProUGUI pontosText;
+    public TextMeshProUGUI texto;
 
     public TextMeshProUGUI[] itemTexts;
 
@@ -57,12 +58,14 @@ public class RecompensasManager : MonoBehaviour
         if (ScoreManager.Pontos >= item.custo)
         {
             ScoreManager.AdicionarPontos(-item.custo);
+            texto.text = $"{item.name} comprado por {item.custo} pontos.";
             Debug.Log($"Item {item.name} comprado por {item.custo} pontos.");
             return true;
         }
         else
         {
             Debug.Log($"Pontos insuficientes para comprar {item.name}. Custo: {item.custo}, Pontos: {ScoreManager.Pontos}");
+            texto.text = $"Pontos insuficientes para comprar {item.name}. Custo: {item.custo}, Pontos: {ScoreManager.Pontos}";
             return false;
         }
     }
