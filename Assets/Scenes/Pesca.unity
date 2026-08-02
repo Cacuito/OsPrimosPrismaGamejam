@@ -2513,8 +2513,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d26c24aca2282e4284fda645dc8ac89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeDescer: 4
-  velocidadeSubir: 6
+  velocidadeDescer: 6
+  velocidadeSubir: 10
   profundidadeMaxima: -4
   pontaDaVara: {fileID: 1184689651}
   movimentoVara: {fileID: 1455625166}
