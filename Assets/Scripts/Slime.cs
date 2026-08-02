@@ -8,11 +8,14 @@ public class Slime : MonoBehaviour
     [SerializeField] float velocidadeMax;
     float velocidade;
     bool direitaOuEsquerda;
+    private AcerteSlime gameManager;
+    public int pontoPorSlime = 5;
 
-    // Start is called before the first frame update
     void Start()
     {
-        velocidade = Random.Range(velocidadeMin, velocidadeMax); 
+        gameManager = FindObjectOfType<AcerteSlime>();
+
+        velocidade = Random.Range(velocidadeMin, velocidadeMax);
         if (transform.position.x == 11)
         {
             direitaOuEsquerda = true;
@@ -23,7 +26,6 @@ public class Slime : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (direitaOuEsquerda)
@@ -36,28 +38,41 @@ public class Slime : MonoBehaviour
         }
     }
 
-    public void AndarDireita ()
+    public void AndarDireita()
     {
         transform.Translate(Vector3.right * velocidade * Time.deltaTime);
 
         if (transform.position.x > 11f)
         {
-            Destroy(gameObject);
+            RemoverSlime();
         }
     }
 
-    public void AndarEsquerda ()
+    public void AndarEsquerda()
     {
         transform.Translate(Vector3.left * velocidade * Time.deltaTime);
 
         if (transform.position.x < -11f)
         {
-            Destroy(gameObject);
+            RemoverSlime();
         }
     }
 
     void OnMouseDown()
     {
+        if (gameManager != null)
+        {
+            gameManager.AddScore(pontoPorSlime);
+        }
+        RemoverSlime();
+    }
+
+    private void RemoverSlime()
+    {
+        if (gameManager != null)
+        {
+            gameManager.SlimeDestruido();
+        }
         Destroy(gameObject);
     }
 }
