@@ -8,6 +8,9 @@ public class Dialogo : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] falas;
     public float velocidadeTexto;
+    public GameObject personagem;
+    [SerializeField] public PlayerMoviment player;
+    [SerializeField] public GameObject canvas;
 
     private int index;
 
@@ -61,7 +64,14 @@ public class Dialogo : MonoBehaviour
         }
         else
         {
+            if(canvas)
+            {
+                canvas.SetActive(true);
+            }
+            
             gameObject.SetActive(false);
+            personagem.SetActive(false);
+            player.podeMover = true;
         }
     }
 }
