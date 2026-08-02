@@ -472,7 +472,13 @@ PolygonCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
-    m_Paths: []
+    m_Paths:
+    - - {x: -0.3864725, y: 0.48470095}
+      - {x: -0.5121394, y: 0.24267372}
+      - {x: -0.50044775, y: -0.38400787}
+      - {x: 0.14044654, y: -0.48676914}
+      - {x: 0.24910799, y: -0.25001255}
+      - {x: 0.25735906, y: 0.42161652}
   m_UseDelaunayMesh: 0
 --- !u!1001 &327778018
 PrefabInstance:
@@ -2098,6 +2104,7 @@ GameObject:
   - component: {fileID: 1059017508}
   - component: {fileID: 1059017507}
   - component: {fileID: 1059017510}
+  - component: {fileID: 1059017512}
   - component: {fileID: 1059017511}
   m_Layer: 0
   m_Name: Player
@@ -2174,8 +2181,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 0.02714713, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b5382de57c80cdc4aab670a84ef58941, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2194,8 +2201,8 @@ Transform:
   m_GameObject: {fileID: 1059017506}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -16.13, z: 0}
-  m_LocalScale: {x: 1.7242104, y: 1.7242104, z: 1}
+  m_LocalPosition: {x: 0, y: -12.68, z: 0}
+  m_LocalScale: {x: 1.2974856, y: 1.2974856, z: 0.75251}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8888871}
@@ -2250,8 +2257,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2259,10 +2266,77 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
+    - - {x: -0.089999996, y: -1.68}
+      - {x: 0.13, y: -1.67}
+      - {x: 0.11, y: -1.79}
+      - {x: 0.16, y: -2.01}
+      - {x: 0.19999999, y: -2.07}
+      - {x: 0.25, y: -2.08}
+      - {x: 0.39, y: -2.08}
+      - {x: 0.48, y: -1.99}
+      - {x: 0.48, y: -1.68}
+      - {x: 0.5, y: -1.56}
+      - {x: 0.59, y: -1.5799999}
+      - {x: 0.74, y: -1.56}
+      - {x: 0.84999996, y: -1.4699999}
+      - {x: 0.87, y: -1.4}
+      - {x: 0.87, y: -1.26}
+      - {x: 0.77, y: -1.15}
+      - {x: 0.74, y: -1.02}
+      - {x: 0.71999997, y: -0.78}
+      - {x: 0.59999996, y: -0.71}
+      - {x: 0.61, y: -0.47}
+      - {x: 0.69, y: -0.17}
+      - {x: 0.61, y: 0.11}
+      - {x: 0.45, y: 0.24}
+      - {x: 0.22999999, y: 0.26}
+      - {x: -0.24, y: 0.26}
+      - {x: -0.39999998, y: 0.22999999}
+      - {x: -0.47, y: 0.21}
+      - {x: -0.63, y: 0.03}
+      - {x: -0.65999997, y: -0.17999999}
+      - {x: -0.59999996, y: -0.22999999}
+      - {x: -0.59, y: -0.48}
+      - {x: -0.57, y: -0.72999996}
+      - {x: -0.65999997, y: -0.72999996}
+      - {x: -0.72999996, y: -0.94}
+      - {x: -0.7, y: -1.05}
+      - {x: -0.85999995, y: -1.24}
+      - {x: -0.85999995, y: -1.4499999}
+      - {x: -0.84999996, y: -1.49}
+      - {x: -0.69, y: -1.5899999}
+      - {x: -0.53999996, y: -1.5699999}
+      - {x: -0.47, y: -1.49}
+      - {x: -0.47, y: -1.63}
+      - {x: -0.44, y: -2.02}
+      - {x: -0.39, y: -2.07}
+      - {x: -0.34, y: -2.08}
+      - {x: -0.22, y: -2.08}
+      - {x: -0.17, y: -2.05}
+      - {x: -0.14, y: -2.01}
+      - {x: -0.089999996, y: -1.8299999}
   m_UseDelaunayMesh: 0
+--- !u!95 &1059017512
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059017506}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e45326d03152ce547bd2924e6addbbf9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1199161852 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
