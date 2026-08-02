@@ -13,16 +13,31 @@ public class PlayerMoviment : MonoBehaviour
 
     public bool podeMover = true;
 
+    private Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (animator != null)
+        {
+            if(movimento != Vector2.zero)
+            {
+                animator.SetFloat("InputX", movimento.x);
+                animator.SetFloat("InputY", movimento.y);
+            }   
+
+            animator.SetFloat("speed", movimento.sqrMagnitude);
+        }
+
+
         if (podeMover)
         {
             float moveX = Input.GetAxisRaw("Horizontal");  
