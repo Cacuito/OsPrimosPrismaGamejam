@@ -605,7 +605,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.65, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2251,6 +2251,7 @@ GameObject:
   - component: {fileID: 1677220673}
   - component: {fileID: 1677220674}
   - component: {fileID: 1677220675}
+  - component: {fileID: 1584426591}
   m_Layer: 0
   m_Name: Sereia
   m_TagString: Untagged
@@ -3153,6 +3154,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1699735999}
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1059017509}
