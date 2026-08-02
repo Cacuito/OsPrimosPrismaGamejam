@@ -11,6 +11,8 @@ public class PlayerMoviment : MonoBehaviour
     [Header("Config")]
     public float speed = 5f;
 
+    public bool podeMover = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,16 +23,23 @@ public class PlayerMoviment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveX = Input.GetAxisRaw("Horizontal");  
-        float moveY = Input.GetAxisRaw("Vertical");
+        if (podeMover)
+        {
+            float moveX = Input.GetAxisRaw("Horizontal");  
+            float moveY = Input.GetAxisRaw("Vertical");
 
-        if(Mathf.Abs(moveX) > 0)
-        {
-            movimento = new Vector2(moveX,0).normalized;
-        }
-        else if(Mathf.Abs(moveY) > 0)
-        {
-            movimento = new Vector2(0, moveY).normalized;
+            if(Mathf.Abs(moveX) > 0)
+            {
+                movimento = new Vector2(moveX,0).normalized;
+            }
+            else if(Mathf.Abs(moveY) > 0)
+            {
+                movimento = new Vector2(0, moveY).normalized;
+            }
+            else
+            {
+                movimento = Vector2.zero;
+            }
         }
         else
         {

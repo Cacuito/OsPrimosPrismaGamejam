@@ -9,12 +9,16 @@ public class NPC : MonoBehaviour
     private bool playerEstaNoNPC = false;
 
     [SerializeField] private GameObject space;
+    [SerializeField] private GameObject dialogo;
+    [SerializeField] private PlayerMoviment player;
 
     void Update()
     {
         if (playerEstaNoNPC && Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene(nome);
+            dialogo.SetActive(true);
+            space.SetActive(false);
+            player.podeMover = false;
         }
     }
 
