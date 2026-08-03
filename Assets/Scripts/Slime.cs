@@ -69,10 +69,6 @@ public class Slime : MonoBehaviour
 
     private void RemoverSlime()
     {
-        if (gameManager != null)
-        {
-            gameManager.SlimeDestruido();
-        }
         Destroy(gameObject);
     }
 }
