@@ -1569,12 +1569,17 @@ MonoBehaviour:
   space: {fileID: 8888870}
   scriptDialogo: {fileID: 99203551}
   player: {fileID: 1059017510}
-  dialogoNeutro:
-  - texto: Oieeeeee
-    falaDoJogador: 1
-  - texto: Fala tropa
+  dialogoInicial:
+  - texto: opa
     falaDoJogador: 0
-  dialogoPosMinigameBom: []
+  dialogoIdle:
+  - texto: Te trolei
+    falaDoJogador: 0
+  dialogoPosMinigameBom:
+  - texto: "\u2013 Slimes s\xE3o t\xE3o fofos, ah, eu sinto um pouco pena deles,
+      mas eles nem sentem nada, n\xE3o \xE9? T\xE3o fofinhos."
+    falaDoJogador: 0
+  dialogoPosMinigameNeutro: []
   dialogoPosMinigameRuim: []
   dialogoPosComprarComida: []
 --- !u!61 &421320759
@@ -2952,31 +2957,12 @@ MonoBehaviour:
   space: {fileID: 8888870}
   scriptDialogo: {fileID: 1399315213}
   player: {fileID: 1059017510}
-  dialogoNeutro:
-  - texto: " Demorei tanto tempo para me arrumar\u2026 Espero que esse festival valha
-      a pena."
-    falaDoJogador: 0
-  - texto: Voce esta sempre muito bonita, Iris.
-    falaDoJogador: 1
-  - texto: "Ah,  claro, eu sei disso. E voce\u2026? Bem, e rustico."
-    falaDoJogador: 0
-  - texto: Eu poderia te fazer companhia durante o festival?
-    falaDoJogador: 1
-  - texto: " \u2026..........."
-    falaDoJogador: 0
-  - texto: "Acho que a fuligem dessa fogueira vai sujar meu cabelo\u2026!"
-    falaDoJogador: 0
-  dialogoPosMinigameBom:
-  - texto: Esses Goblin sao tao divertidos! Adoro o barulho que eles fazem quando
-      voce aperta eles. Eu poderia ver a noite toda.
-    falaDoJogador: 0
-  dialogoPosMinigameRuim:
-  - texto: "Voce nao tem o minimo de empatia comigo, nao e? Pescar peixes?! Francamente\u2026"
-    falaDoJogador: 0
-  dialogoPosComprarComida:
-  - texto: "Oh! Acai com farinha e minha comida favorita no mundo, nao ha nada igual.
-      Voce consegue ser um doce quando decide pensar um pouco\u2026"
-    falaDoJogador: 0
+  dialogoInicial: []
+  dialogoIdle: []
+  dialogoPosMinigameBom: []
+  dialogoPosMinigameNeutro: []
+  dialogoPosMinigameRuim: []
+  dialogoPosComprarComida: []
 --- !u!212 &954109566
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5489,7 +5475,10 @@ MonoBehaviour:
   scriptDialogo: {fileID: 0}
   player: {fileID: 0}
   dialogoNeutro: []
+  dialogoInicial: []
+  dialogoIdle: []
   dialogoPosMinigameBom: []
+  dialogoPosMinigameNeutro: []
   dialogoPosMinigameRuim: []
   dialogoPosComprarComida: []
 --- !u!60 &1677220676
@@ -5688,8 +5677,10 @@ MonoBehaviour:
   space: {fileID: 8888870}
   scriptDialogo: {fileID: 1104699375}
   player: {fileID: 1059017510}
-  dialogoNeutro: []
+  dialogoInicial: []
+  dialogoIdle: []
   dialogoPosMinigameBom: []
+  dialogoPosMinigameNeutro: []
   dialogoPosMinigameRuim: []
   dialogoPosComprarComida: []
 --- !u!61 &1680632436

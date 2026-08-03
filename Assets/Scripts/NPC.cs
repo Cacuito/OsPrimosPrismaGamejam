@@ -4,8 +4,10 @@ using UnityEngine;
 
 public enum EstadoInteracaoNPC
 {
-    Neutro,
+    Inicial,
+    Idle,
     MinigameBom,
+    MinigameNeutro,
     MinigameRuim,
     ComprouComida
 }
@@ -20,12 +22,30 @@ public class NPC : MonoBehaviour
     [SerializeField] private PlayerMoviment player;
 
     [Header("Diálogos do NPC")]
-    public LinhaDialogo[] dialogoNeutro;
+    public LinhaDialogo[] dialogoInicial;
+    public LinhaDialogo[] dialogoIdle;
     public LinhaDialogo[] dialogoPosMinigameBom;
+    public LinhaDialogo[] dialogoPosMinigameNeutro;
     public LinhaDialogo[] dialogoPosMinigameRuim;
     public LinhaDialogo[] dialogoPosComprarComida;
 
-    public static EstadoInteracaoNPC estadoGlobal = EstadoInteracaoNPC.Neutro;
+    public static Dictionary<string, EstadoInteracaoNPC> estadosGlobais = new Dictionary<string, EstadoInteracaoNPC>();
+
+    public EstadoInteracaoNPC estadoAtual
+    {
+        get
+        {
+            if (estadosGlobais.ContainsKey(nome))
+            {
+                return estadosGlobais[nome];
+            }
+            return EstadoInteracaoNPC.Inicial; 
+        }
+        set
+        {
+            estadosGlobais[nome] = value;
+        }
+    }
 
     void Update()
     {
@@ -41,10 +61,13 @@ public class NPC : MonoBehaviour
             space.SetActive(false);
             player.podeMover = false;
 
-            switch (estadoGlobal)
+            switch (estadoAtual)
             {
                 case EstadoInteracaoNPC.MinigameBom:
                     scriptDialogo.IniciarDialogo(dialogoPosMinigameBom);
+                    break;
+                case EstadoInteracaoNPC.MinigameNeutro:
+                    scriptDialogo.IniciarDialogo(dialogoPosMinigameNeutro);
                     break;
                 case EstadoInteracaoNPC.MinigameRuim:
                     scriptDialogo.IniciarDialogo(dialogoPosMinigameRuim);
@@ -52,9 +75,13 @@ public class NPC : MonoBehaviour
                 case EstadoInteracaoNPC.ComprouComida:
                     scriptDialogo.IniciarDialogo(dialogoPosComprarComida);
                     break;
-                case EstadoInteracaoNPC.Neutro:
+                case EstadoInteracaoNPC.Idle:
+                    scriptDialogo.IniciarDialogo(dialogoIdle);
+                    break;
+                case EstadoInteracaoNPC.Inicial:
                 default:
-                    scriptDialogo.IniciarDialogo(dialogoNeutro);
+                    scriptDialogo.IniciarDialogo(dialogoInicial);
+                    estadoAtual = EstadoInteracaoNPC.Idle;
                     break;
             }
         }

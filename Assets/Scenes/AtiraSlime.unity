@@ -768,7 +768,7 @@ MonoBehaviour:
   botaoIniciar: {fileID: 2120527589}
   botaoSair: {fileID: 1417899650}
   cajado: {fileID: 617090375}
-  scriptDialogo: {fileID: 0}
+  scriptDialogo: {fileID: 1325021503}
   startingTime: 35
 --- !u!4 &1078196205
 Transform:
@@ -928,6 +928,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1325021503 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+  m_PrefabInstance: {fileID: 1606469325}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e3f9c33e71e4ce0846bcdfcff463e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1358645191
@@ -1430,6 +1441,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1578721776}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corNPC.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corNPC.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corNPC.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: npcBarraca
       value: 1
       objectReference: {fileID: 0}
@@ -1452,6 +1475,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[1]
+      value: "Mas aten\xE7\xE3o, N\xC3O atire nos slimes vermelhos!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.data[0].texto
+      value: "Sauda\xE7\xF5es! Acredito que voc\xEA vai se divertir muito atirando
+        nos slimes!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.data[1].texto
       value: "Mas aten\xE7\xE3o, N\xC3O atire nos slimes vermelhos!"
       objectReference: {fileID: 0}
     - target: {fileID: 6417359937968957889, guid: d04941624338041d58b8ab5da25a1d35, type: 3}

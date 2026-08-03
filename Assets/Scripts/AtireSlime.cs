@@ -169,6 +169,10 @@ public class AcerteSlime : MonoBehaviour
             falaFinal = "Eh... tenho certeza que você poderia ter ido melhor! Só não foi seu dia de sorte.";
         }
 
+        NPC.estadosGlobais["Sereia"] = EstadoInteracaoNPC.MinigameNeutro;
+        NPC.estadosGlobais["Golem"] = EstadoInteracaoNPC.MinigameBom;
+        NPC.estadosGlobais["Dragótica"] = EstadoInteracaoNPC.MinigameRuim;
+
         if (scriptDialogo != null)
         {
             scriptDialogo.IniciarDialogoPosJogo(falaFinal, botaoIniciar, botaoSair);

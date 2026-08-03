@@ -82,6 +82,10 @@ public class GoblinGameManager : MonoBehaviour
 
         playing = false;
         playButton.SetActive(true);
+
+        NPC.estadosGlobais["Sereia"] = EstadoInteracaoNPC.MinigameBom;
+        NPC.estadosGlobais["Golem"] = EstadoInteracaoNPC.MinigameRuim;
+        NPC.estadosGlobais["Dragótica"] = EstadoInteracaoNPC.MinigameNeutro;
     }
 
     void Update()

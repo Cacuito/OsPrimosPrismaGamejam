@@ -110,6 +110,10 @@ public class PescaManager : MonoBehaviour
 
         // Reexibe o botão de Play para poder jogar de novo
         if (playButton != null) playButton.SetActive(true);
+
+        NPC.estadosGlobais["Sereia"] = EstadoInteracaoNPC.MinigameRuim;
+        NPC.estadosGlobais["Golem"] = EstadoInteracaoNPC.MinigameNeutro;
+        NPC.estadosGlobais["Dragótica"] = EstadoInteracaoNPC.MinigameBom;
     }
 
     private IEnumerator SpawnPeixesRoutine()
