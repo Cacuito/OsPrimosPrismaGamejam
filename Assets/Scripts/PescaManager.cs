@@ -68,6 +68,9 @@ public class PescaManager : MonoBehaviour
     // Função para ligar no evento OnClick() do seu Botão de Play
     public void StartGame()
     {
+        MoralSystem.AdicionarMoral(10, "D");
+        MoralSystem.AdicionarMoral(-15, "S");
+
         tempoRestante = tempoDeJogo;
         jogando = true;
 
