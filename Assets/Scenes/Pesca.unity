@@ -1079,14 +1079,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 708778616456052938, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: VoltarMundo
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590128858774662941, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 400
-      objectReference: {fileID: 0}
     - target: {fileID: 3833858238210341162, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1170,18 +1162,6 @@ PrefabInstance:
     - target: {fileID: 4778330111038777571, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
       propertyPath: m_Name
       value: CanvasPause
-      objectReference: {fileID: 0}
-    - target: {fileID: 4778330111038777571, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4778330111038777571, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 4877971308930674403, guid: 1cff6ce6fbaf14f1391843982ccd6fc9, type: 3}
-      propertyPath: m_text
-      value: Sair da barraca
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
