@@ -15,16 +15,20 @@ public class Dialogo : MonoBehaviour
     public TextMeshProUGUI textoMoral;
     public string idPersonagem;
 
+    [SerializeField] public bool npcBarraca;
+    [SerializeField] private CameraZoom scriptDeZoom;
+    
     private int index;
+    private bool posJogo = false;
+    private GameObject btnIniciarTemp;
+    private GameObject btnSairTemp;
 
-    // Start is called before the first frame update
     void Start()
     {
         textComponent.text = string.Empty;
         ComecarDialogo();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -63,9 +67,8 @@ public class Dialogo : MonoBehaviour
         StartCoroutine(DigitaFala());
     }
 
-    IEnumerator DigitaFala ()
+    IEnumerator DigitaFala()
     {
-        //Digita uma letra de cada vez
         foreach (char c in falas[index].ToCharArray())
         {
             textComponent.text += c;
@@ -89,8 +92,57 @@ public class Dialogo : MonoBehaviour
             }
             
             gameObject.SetActive(false);
-            personagem.SetActive(false);
-            player.podeMover = true;
+            if (personagem != null)
+            {
+                personagem.SetActive(false);
+            }
+
+            if(player)
+            {
+                player.podeMover = true;
+            }
+
+            if (posJogo)
+            {
+                if (btnIniciarTemp != null) btnIniciarTemp.SetActive(true);
+                if (btnSairTemp != null) btnSairTemp.SetActive(true);
+                posJogo = false;
+
+                if (scriptDeZoom != null)
+                {
+                    scriptDeZoom.IniciarZoomParaMinigame();
+                }
+            }
+            else if (npcBarraca)
+            {
+               if (scriptDeZoom != null)
+                {
+                    scriptDeZoom.IniciarZoomParaMinigame();
+                }
+            }
         }
+    }
+
+    public void IniciarDialogoPosJogo(string fala, GameObject btnIniciar, GameObject btnSair)
+    {
+        falas = new string[] { fala };
+        index = 0;
+        posJogo = true;
+        btnIniciarTemp = btnIniciar;
+        btnSairTemp = btnSair;
+
+        gameObject.SetActive(true);
+        if (personagem != null)
+        {
+            personagem.SetActive(true);
+        }
+
+        if (scriptDeZoom != null)
+        {
+            scriptDeZoom.VoltarZoomOriginal();
+        }
+        
+        textComponent.text = string.Empty;
+        StartCoroutine(DigitaFala());
     }
 }
