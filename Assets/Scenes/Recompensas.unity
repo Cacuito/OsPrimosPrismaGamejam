@@ -588,7 +588,7 @@ MonoBehaviour:
     id: S
     "\xE9ItemFinal": 1
   - name: Coracao de Barro
-    custo: 1000
+    custo: 5000
     id: G
     "\xE9ItemFinal": 1
 --- !u!1 &586087531

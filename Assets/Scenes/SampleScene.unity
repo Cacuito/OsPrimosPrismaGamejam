@@ -6288,6 +6288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1699736000}
   - component: {fileID: 1699735999}
+  - component: {fileID: 1699736001}
   m_Layer: 0
   m_Name: "Ch\xE3o"
   m_TagString: Untagged
@@ -6362,6 +6363,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1699736001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699735998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0724264744d5f48be30f45317c2d56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogoLobby: {fileID: 1731515871}
 --- !u!1 &1717462059
 GameObject:
   m_ObjectHideFlags: 0
@@ -6396,6 +6410,11 @@ Transform:
   - {fileID: 1837638826}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1731515871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+  m_PrefabInstance: {fileID: 1498050127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1750641319
 GameObject:
   m_ObjectHideFlags: 0
