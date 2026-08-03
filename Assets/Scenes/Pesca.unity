@@ -2946,6 +2946,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SistemaDialogo
       objectReference: {fileID: 0}
+    - target: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
