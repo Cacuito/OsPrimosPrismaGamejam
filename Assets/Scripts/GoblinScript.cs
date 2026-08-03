@@ -13,7 +13,7 @@ public class GoblinScript : MonoBehaviour
     [SerializeField] private Sprite bombaSprite;
 
     private Vector2 startPosition = new Vector2(0, -1.56f);
-    private Vector2 endPosition = Vector2.zero;
+    private Vector2 endPosition = new Vector2(0, 0.7f);
 
     private float showDuration = 0.5f;
     private float duration = 1f;
@@ -189,12 +189,14 @@ public class GoblinScript : MonoBehaviour
         {
             goblinType = GoblinType.Goblin2;
             spriteRenderer.sprite = goblin2;
+            spriteRenderer.color = Color.red;
             lives = 2;
         }
         else
         {
             goblinType = GoblinType.Goblin1;
             spriteRenderer.sprite = goblin;
+            spriteRenderer.color = Color.white;
             lives = 1;
         }
 
