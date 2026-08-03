@@ -768,7 +768,7 @@ MonoBehaviour:
   botaoIniciar: {fileID: 2120527589}
   botaoSair: {fileID: 1417899650}
   cajado: {fileID: 617090375}
-  scriptDialogo: {fileID: 1325021500}
+  scriptDialogo: {fileID: 0}
   startingTime: 35
 --- !u!4 &1078196205
 Transform:
@@ -919,17 +919,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137399780}
   m_CullTransparentMesh: 1
---- !u!114 &1325021500 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
-  m_PrefabInstance: {fileID: 1606469325}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47e3f9c33e71e4ce0846bcdfcff463e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1325021501 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7280801283414852413, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
