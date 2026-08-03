@@ -1465,6 +1465,10 @@ PrefabInstance:
       value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: scriptSlimeManager
       value: 
       objectReference: {fileID: 1078196204}
@@ -1479,12 +1483,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[0].texto
-      value: "Saudacoes! Acredito que voc\xEA vai se divertir muito atirando nos
-        slimes!"
+      value: Saudacoes! Acredito que voce vai se divertir muito atirando nos slimes!
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[1].texto
-      value: Mas atencao, NAO atire nos slimes vermelhos!
+      value: "Mas atencao, NAO atire nos slimes vermelhos!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6417359937968957889, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: m_Sprite
