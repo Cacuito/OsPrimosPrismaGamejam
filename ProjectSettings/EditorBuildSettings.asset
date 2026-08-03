@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Recompensas.unity
     guid: 988fae10d0c4da644a6ac1d2c2e16193
+  - enabled: 1
+    path: Assets/Scenes/Comida.unity
+    guid: e77d8b8c305c943449dff83db50babf3
   m_configObjects: {}
