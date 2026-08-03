@@ -282,6 +282,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32634878}
   m_CullTransparentMesh: 1
+--- !u!114 &99203551 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+  m_PrefabInstance: {fileID: 1295723824}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e3f9c33e71e4ce0846bcdfcff463e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &130434024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,6 +1252,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1878408239583518538, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: player
       value: 
@@ -1252,6 +1267,10 @@ PrefabInstance:
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: idPersonagem
       value: S
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939565651055790693, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6417359937968957889, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: m_Sprite
@@ -1338,6 +1357,10 @@ PrefabInstance:
       value: SistemaDialogoS
       objectReference: {fileID: 0}
     - target: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133139988190687560, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1496,11 +1519,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7689967021338808990, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
   m_PrefabInstance: {fileID: 327778018}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &386909035 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
-  m_PrefabInstance: {fileID: 2001041746}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &421320756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,8 +1567,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Golem
   space: {fileID: 8888870}
-  dialogo: {fileID: 1831421955}
+  scriptDialogo: {fileID: 99203551}
   player: {fileID: 1059017510}
+  dialogoNeutro:
+  - texto: Oieeeeee
+    falaDoJogador: 1
+  - texto: Fala tropa
+    falaDoJogador: 0
+  dialogoPosMinigameBom: []
+  dialogoPosMinigameRuim: []
+  dialogoPosComprarComida: []
 --- !u!61 &421320759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2922,10 +2948,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22653a27f0b0e4a6791f157286c43860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nome: Seria
+  nome: Sereia
   space: {fileID: 8888870}
-  dialogo: {fileID: 1199161852}
+  scriptDialogo: {fileID: 1399315213}
   player: {fileID: 1059017510}
+  dialogoNeutro: []
+  dialogoPosMinigameBom: []
+  dialogoPosMinigameRuim: []
+  dialogoPosComprarComida: []
 --- !u!212 &954109566
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3797,6 +3827,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1104699375 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+  m_PrefabInstance: {fileID: 2001041746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e3f9c33e71e4ce0846bcdfcff463e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1131617899
 GameObject:
   m_ObjectHideFlags: 0
@@ -3927,11 +3968,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.2, y: 10.087795}
   m_EdgeRadius: 0
---- !u!1 &1199161852 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
-  m_PrefabInstance: {fileID: 327778018}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1208857740
 GameObject:
   m_ObjectHideFlags: 0
@@ -4215,6 +4251,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1878408239583518538, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: player
       value: 
@@ -4226,6 +4266,10 @@ PrefabInstance:
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: idPersonagem
       value: G
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939565651055790693, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6417359937968957889, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: m_Sprite
@@ -4312,6 +4356,10 @@ PrefabInstance:
       value: SistemaDialogoG
       objectReference: {fileID: 0}
     - target: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133139988190687560, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -4744,6 +4792,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1399315213 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+  m_PrefabInstance: {fileID: 327778018}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e3f9c33e71e4ce0846bcdfcff463e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1575904323
 GameObject:
   m_ObjectHideFlags: 0
@@ -5406,8 +5465,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: 
   space: {fileID: 0}
-  dialogo: {fileID: 0}
+  scriptDialogo: {fileID: 0}
   player: {fileID: 0}
+  dialogoNeutro: []
+  dialogoPosMinigameBom: []
+  dialogoPosMinigameRuim: []
+  dialogoPosComprarComida: []
 --- !u!60 &1677220676
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5602,8 +5665,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: "Drag\xF3tica"
   space: {fileID: 8888870}
-  dialogo: {fileID: 386909035}
+  scriptDialogo: {fileID: 1104699375}
   player: {fileID: 1059017510}
+  dialogoNeutro: []
+  dialogoPosMinigameBom: []
+  dialogoPosMinigameRuim: []
+  dialogoPosComprarComida: []
 --- !u!61 &1680632436
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5956,11 +6023,6 @@ PolygonCollider2D:
       - {x: 0.17560297, y: -0.4465381}
       - {x: 0.25573614, y: -0.20736408}
   m_UseDelaunayMesh: 0
---- !u!1 &1831421955 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
-  m_PrefabInstance: {fileID: 1295723824}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1837638825
 GameObject:
   m_ObjectHideFlags: 0
@@ -6418,6 +6480,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1878408239583518538, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: player
       value: 
@@ -6429,6 +6495,10 @@ PrefabInstance:
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: idPersonagem
       value: D
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939565651055790693, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6417359937968957889, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: m_Sprite
@@ -6503,6 +6573,10 @@ PrefabInstance:
       value: SistemaDialogoD
       objectReference: {fileID: 0}
     - target: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133139988190687560, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
