@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class MouseMove2D : MonoBehaviour
+public class FollowCursor : MonoBehaviour
 {
 
     private Vector3 mousePosition;

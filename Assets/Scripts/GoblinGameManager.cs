@@ -20,7 +20,6 @@ public class GoblinGameManager : MonoBehaviour
     private HashSet<GoblinScript> currentGoblins = new HashSet<GoblinScript>();
     private bool playing = false;
 
-    // Guarda apenas os acertos desta partida específica para controlar a dificuldade
     private int scoreNaRodada = 0;
 
     void Start()
@@ -38,7 +37,6 @@ public class GoblinGameManager : MonoBehaviour
 
         playing = false;
 
-        // Reset da pontuação da rodada atual
         scoreNaRodada = 0;
 
         for (int i = 0; i < goblins.Count; i++)
@@ -104,7 +102,6 @@ public class GoblinGameManager : MonoBehaviour
                 timeText.text = $"{(int)timeRemaining / 60}:{(int)timeRemaining % 60:D2}";
             }
 
-            // A quantidade de goblins em tela agora sobe gradualmente conforme você joga A RODADA
             int nivelDificuldade = scoreNaRodada / 10;
 
             if (currentGoblins.Count <= nivelDificuldade)
@@ -121,10 +118,8 @@ public class GoblinGameManager : MonoBehaviour
 
     public void AddScore(int goblinIndex, int pontosPerGoblin)
     {
-        // 1. Aumenta a pontuação salva no PlayerPrefs
         ScoreManager.AdicionarPontos(pontosPerGoblin);
 
-        // 2. Aumenta a pontuação da rodada interna
         scoreNaRodada++;
 
         if (scoreText != null)
@@ -132,7 +127,7 @@ public class GoblinGameManager : MonoBehaviour
             scoreText.text = $"{ScoreManager.Pontos}";
         }
 
-        timeRemaining += 1f;
+       // timeRemaining += 1f;
         currentGoblins.Remove(goblins[goblinIndex]);
     }
 
