@@ -1265,6 +1265,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1575904325}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.b
+      value: 0.1682093
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.g
+      value: 0.1682093
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.r
+      value: 0.18867922
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: idPersonagem
       value: S
       objectReference: {fileID: 0}
@@ -4319,6 +4331,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2009424216}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.b
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.g
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.r
+      value: 0.19215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: idPersonagem
       value: G
       objectReference: {fileID: 0}
@@ -6588,6 +6612,18 @@ PrefabInstance:
       propertyPath: textoMoral
       value: 
       objectReference: {fileID: 1666488408}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.b
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.g
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.r
+      value: 0.19215687
+      objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: idPersonagem
       value: D
