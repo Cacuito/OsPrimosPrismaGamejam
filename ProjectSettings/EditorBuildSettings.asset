@@ -26,4 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Comida.unity
     guid: e77d8b8c305c943449dff83db50babf3
+  - enabled: 1
+    path: Assets/Scenes/CenaFinalG.unity
+    guid: 5c8d688543741994287f7f299be65c65
+  - enabled: 1
+    path: Assets/Scenes/CenaFinalD.unity
+    guid: e98112f43bc2cf04e8eb54bbd1cde510
+  - enabled: 1
+    path: Assets/Scenes/CenaFinalS.unity
+    guid: 279d4e9bd3f62dd4da0643d10c5c2784
   m_configObjects: {}
