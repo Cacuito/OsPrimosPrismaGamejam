@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[System.Serializable]
+public struct LinhaDialogo
+{
+    [TextArea(2, 5)]
+    public string texto;
+    public bool falaDoJogador;
+}
+
 public class Dialogo : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
-    public string[] falas;
+    public LinhaDialogo[] falas;
     public float velocidadeTexto;
     public GameObject personagem;
     [SerializeField] public PlayerMoviment player;
@@ -18,6 +26,9 @@ public class Dialogo : MonoBehaviour
     [SerializeField] public bool npcBarraca;
     [SerializeField] private CameraZoom scriptDeZoom;
     
+    public Color corNPC = Color.white;
+    public Color corJogador = Color.cyan;
+
     private int index;
     private bool posJogo = false;
     private GameObject btnIniciarTemp;
@@ -26,21 +37,20 @@ public class Dialogo : MonoBehaviour
     void Start()
     {
         textComponent.text = string.Empty;
-        ComecarDialogo();
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (textComponent.text == falas[index])
+            if (textComponent.text == falas[index].texto)
             {
                 ProximaFala();
             }
             else
             {
                 StopAllCoroutines();
-                textComponent.text = falas[index];
+                textComponent.text = falas[index].texto;
             }
         }
 
@@ -61,15 +71,34 @@ public class Dialogo : MonoBehaviour
         }
     }
 
-    void ComecarDialogo()
+    public void IniciarDialogo(LinhaDialogo[] novasFalas)
     {
+        falas = novasFalas;
         index = 0;
+        posJogo = false;
+        textComponent.text = string.Empty;
+        
+        gameObject.SetActive(true);
+        if (personagem != null)
+        {
+            personagem.SetActive(true);
+        }
+
         StartCoroutine(DigitaFala());
     }
 
     IEnumerator DigitaFala()
     {
-        foreach (char c in falas[index].ToCharArray())
+        if (falas[index].falaDoJogador)
+        {
+            textComponent.color = corJogador;
+        }
+        else
+        {
+            textComponent.color = corNPC;
+        }
+
+        foreach (char c in falas[index].texto.ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(velocidadeTexto);
@@ -86,46 +115,52 @@ public class Dialogo : MonoBehaviour
         }
         else
         {
-            if(canvas)
-            {
-                canvas.SetActive(true);
-            }
-            
-            gameObject.SetActive(false);
-            if (personagem != null)
-            {
-                personagem.SetActive(false);
-            }
+            EncerrarDialogo();
+        }
+    }
 
-            if(player)
-            {
-                player.podeMover = true;
-            }
+    private void EncerrarDialogo()
+    {
+        if(canvas)
+        {
+            canvas.SetActive(true);
+        }
+        
+        gameObject.SetActive(false);
+        if (personagem != null)
+        {
+            personagem.SetActive(false);
+        }
 
-            if (posJogo)
-            {
-                if (btnIniciarTemp != null) btnIniciarTemp.SetActive(true);
-                if (btnSairTemp != null) btnSairTemp.SetActive(true);
-                posJogo = false;
+        if(player)
+        {
+            player.podeMover = true;
+        }
 
-                if (scriptDeZoom != null)
-                {
-                    scriptDeZoom.IniciarZoomParaMinigame();
-                }
-            }
-            else if (npcBarraca)
+        if (posJogo)
+        {
+            if (btnIniciarTemp != null) btnIniciarTemp.SetActive(true);
+            if (btnSairTemp != null) btnSairTemp.SetActive(true);
+            posJogo = false;
+
+            if (scriptDeZoom != null)
             {
-               if (scriptDeZoom != null)
-                {
-                    scriptDeZoom.IniciarZoomParaMinigame();
-                }
+                scriptDeZoom.IniciarZoomParaMinigame();
+            }
+        }
+        else if (npcBarraca)
+        {
+           if (scriptDeZoom != null)
+            {
+                scriptDeZoom.IniciarZoomParaMinigame();
             }
         }
     }
 
     public void IniciarDialogoPosJogo(string fala, GameObject btnIniciar, GameObject btnSair)
     {
-        falas = new string[] { fala };
+        falas = new LinhaDialogo[1];
+        falas[0] = new LinhaDialogo { texto = fala, falaDoJogador = false };
         index = 0;
         posJogo = true;
         btnIniciarTemp = btnIniciar;
