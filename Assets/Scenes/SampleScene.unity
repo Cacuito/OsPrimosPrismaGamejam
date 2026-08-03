@@ -568,6 +568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SistemaDialogoS
       objectReference: {fileID: 0}
+    - target: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -715,11 +719,6 @@ PolygonCollider2D:
       - {x: 0.1356645, y: -0.49849916}
       - {x: 0.24900606, y: -0.25784928}
   m_UseDelaunayMesh: 0
---- !u!1 &386909035 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
-  m_PrefabInstance: {fileID: 2001041746}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &421320756
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,8 +767,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Golem
   space: {fileID: 8888870}
-  dialogo: {fileID: 1831421955}
+  scriptDialogo: {fileID: 0}
   player: {fileID: 1059017510}
+  dialogoNeutro: []
+  dialogoPosMinigameBom: []
+  dialogoPosMinigameRuim: []
+  dialogoPosComprarComida: []
 --- !u!61 &421320759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1881,10 +1884,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22653a27f0b0e4a6791f157286c43860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nome: Seria
+  nome: Sereia
   space: {fileID: 8888870}
-  dialogo: {fileID: 1199161852}
+  scriptDialogo: {fileID: 1945782838}
   player: {fileID: 1059017510}
+  dialogoNeutro:
+  - texto: 
+    falaDoJogador: 0
+  dialogoPosMinigameBom: []
+  dialogoPosMinigameRuim: []
+  dialogoPosComprarComida: []
 --- !u!61 &954109565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2514,11 +2523,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &1199161852 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
-  m_PrefabInstance: {fileID: 327778018}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1216866883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3442,8 +3446,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: 
   space: {fileID: 0}
-  dialogo: {fileID: 0}
+  scriptDialogo: {fileID: 0}
   player: {fileID: 0}
+  dialogoNeutro: []
+  dialogoPosMinigameBom: []
+  dialogoPosMinigameRuim: []
+  dialogoPosComprarComida: []
 --- !u!61 &1677220676
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3537,8 +3545,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: "Drag\xF3tica"
   space: {fileID: 8888870}
-  dialogo: {fileID: 386909035}
+  scriptDialogo: {fileID: 0}
   player: {fileID: 1059017510}
+  dialogoNeutro: []
+  dialogoPosMinigameBom: []
+  dialogoPosMinigameRuim: []
+  dialogoPosComprarComida: []
 --- !u!61 &1680632436
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3891,11 +3903,6 @@ PolygonCollider2D:
       - {x: 0.17560297, y: -0.4465381}
       - {x: 0.25573614, y: -0.20736408}
   m_UseDelaunayMesh: 0
---- !u!1 &1831421955 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
-  m_PrefabInstance: {fileID: 1295723824}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1837638825
 GameObject:
   m_ObjectHideFlags: 0
@@ -4027,6 +4034,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1945782838 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+  m_PrefabInstance: {fileID: 327778018}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e3f9c33e71e4ce0846bcdfcff463e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1965560978
 GameObject:
   m_ObjectHideFlags: 0
