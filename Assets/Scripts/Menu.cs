@@ -15,6 +15,7 @@ public class Menu : MonoBehaviour
     void Start()
     {
         VerificarSalvamento();
+        SoundManager.PlayMusic(SoundType.MUSICAMENU, 0.5f);
     }
 
     // Update is called once per frame
