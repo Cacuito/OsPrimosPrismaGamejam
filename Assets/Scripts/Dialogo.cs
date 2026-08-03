@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI; // Necessário para acessar o componente Image
 
 [System.Serializable]
 public struct LinhaDialogo
@@ -141,14 +142,14 @@ public class Dialogo : MonoBehaviour
         }
     }
 
-    public void IniciarDialogo(LinhaDialogo[] novasFalas)
+    // Função atualizada para receber o Sprite da expressão
+    public void IniciarDialogo(LinhaDialogo[] novasFalas, Sprite expressaoNPC = null)
     {
         falas = novasFalas;
         index = 0;
         posJogo = false;
         textComponent.text = string.Empty;
         
-        // Garante que o objeto pai (Canvas) esteja ativo na cena
         if (transform.parent != null)
         {
             transform.parent.gameObject.SetActive(true);
@@ -159,6 +160,16 @@ public class Dialogo : MonoBehaviour
         if (personagem != null)
         {
             personagem.SetActive(true);
+            
+            // Se o NPC enviou uma expressão e o personagem tem uma Imagem, ele troca
+            if (expressaoNPC != null)
+            {
+                Image imagemPersonagem = personagem.GetComponent<Image>();
+                if (imagemPersonagem != null)
+                {
+                    imagemPersonagem.sprite = expressaoNPC;
+                }
+            }
         }
 
         StartCoroutine(DigitaFala());

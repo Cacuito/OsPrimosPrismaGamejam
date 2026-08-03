@@ -534,11 +534,13 @@ MonoBehaviour:
   - {fileID: 774075768}
   - {fileID: 820359418}
   playButton: {fileID: 531914046}
+  botaoSair: {fileID: 747921516}
   gameUI: {fileID: 396153117}
   outOfTimeText: {fileID: 1112838041}
   bombText: {fileID: 2058129286}
   timeText: {fileID: 327047357}
   scoreText: {fileID: 504274122}
+  scriptDialogo: {fileID: 1922512777}
   startingTime: 30
 --- !u!4 &392737306
 Transform:
@@ -2242,6 +2244,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ec1a5bd54b9d4348bc63b471092e4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1922512777 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+  m_PrefabInstance: {fileID: 2030306563}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e3f9c33e71e4ce0846bcdfcff463e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1981295744
