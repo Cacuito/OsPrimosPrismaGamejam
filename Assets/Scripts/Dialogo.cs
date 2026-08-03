@@ -19,6 +19,10 @@ public class Dialogo : MonoBehaviour
     public GameObject personagem;
     [SerializeField] public PlayerMoviment player;
     [SerializeField] public GameObject canvas;
+
+    public TextMeshProUGUI textoMoral;
+    public string idPersonagem;
+
     [SerializeField] public bool npcBarraca;
     [SerializeField] private CameraZoom scriptDeZoom;
     
@@ -47,6 +51,22 @@ public class Dialogo : MonoBehaviour
             {
                 StopAllCoroutines();
                 textComponent.text = falas[index].texto;
+            }
+        }
+
+        if(textoMoral != null && idPersonagem != null)
+        {
+            if (idPersonagem == "D")
+            {
+                textoMoral.text = $"{MoralSystem.moralD}";
+            }
+            else if (idPersonagem == "S")
+            {
+                textoMoral.text = $"{MoralSystem.moralS}";
+            }
+            else if (idPersonagem == "G")
+            {
+                textoMoral.text = $"{MoralSystem.moralG}";
             }
         }
     }
