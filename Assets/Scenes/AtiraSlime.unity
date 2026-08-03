@@ -1299,6 +1299,19 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1578721776}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: velocidadeTexto
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.data[0]
+      value: "Sauda\xE7\xF5es! Acredito que voc\xEA vai se divertir muito atirando
+        nos slimes! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.data[1]
+      value: "Mas aten\xE7\xE3o, N\xC3O atire nos slimes vermelhos!"
+      objectReference: {fileID: 0}
     - target: {fileID: 6417359937968957889, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: m_Sprite
       value: 
