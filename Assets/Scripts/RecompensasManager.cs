@@ -11,6 +11,8 @@ public class RecompensasManager : MonoBehaviour
 
     public TextMeshProUGUI[] itemTexts;
 
+    public int moralPorComida = 30;
+
 
     [System.Serializable]
     public struct Item
@@ -63,9 +65,9 @@ public class RecompensasManager : MonoBehaviour
         {
             if (!item.éItemFinal)
             {
-                if (item.id == "D") MoralSystem.AdicionarMoral(10, item.id);
-                else if (item.id == "S") MoralSystem.AdicionarMoral(10, item.id);
-                else if (item.id == "G") MoralSystem.AdicionarMoral(10, item.id);
+                if (item.id == "D") MoralSystem.AdicionarMoral(moralPorComida, item.id);
+                else if (item.id == "S") MoralSystem.AdicionarMoral(moralPorComida, item.id);
+                else if (item.id == "G") MoralSystem.AdicionarMoral(moralPorComida, item.id);
             }
             if (item.éItemFinal)
             {
