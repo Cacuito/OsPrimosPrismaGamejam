@@ -713,10 +713,16 @@ MonoBehaviour:
   items:
   - name: Item 1
     custo: 1000
+    id: D
+    "\xE9ItemFinal": 1
   - name: Item 2
     custo: 1500
+    id: S
+    "\xE9ItemFinal": 1
   - name: Item 3
     custo: 5000
+    id: G
+    "\xE9ItemFinal": 1
 --- !u!1 &586087531
 GameObject:
   m_ObjectHideFlags: 0
