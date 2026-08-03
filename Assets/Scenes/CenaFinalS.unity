@@ -397,6 +397,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+--- !u!114 &923437913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+  m_PrefabInstance: {fileID: 923437912}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e3f9c33e71e4ce0846bcdfcff463e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &976301904 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
@@ -544,6 +555,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+--- !u!114 &1226738566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+  m_PrefabInstance: {fileID: 1226738565}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e3f9c33e71e4ce0846bcdfcff463e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1811604247
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,6 +598,11 @@ MonoBehaviour:
   id: S
   finalBom: {fileID: 2048117371}
   finalRuim: {fileID: 976301904}
+  personagemBom: {fileID: 0}
+  personagemRuim: {fileID: 0}
+  dialogoFinalBom: {fileID: 923437913}
+  dialogoFinalRuim: {fileID: 1226738566}
+  nomeCenaMenu: MenuInicial
 --- !u!4 &1811604249
 Transform:
   m_ObjectHideFlags: 0

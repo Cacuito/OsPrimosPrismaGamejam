@@ -159,7 +159,7 @@ public class AnzolPesca : MonoBehaviour
     {
         if (peixePego != null)
         {
-            ScoreManager.AdicionarPontos(1);
+            ScoreManager.AdicionarPontos(10);
             Destroy(peixePego.gameObject);
             peixePego = null;
         }

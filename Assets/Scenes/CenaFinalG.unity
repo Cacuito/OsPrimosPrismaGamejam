@@ -421,6 +421,11 @@ MonoBehaviour:
   id: G
   finalBom: {fileID: 1901071960}
   finalRuim: {fileID: 816314931}
+  personagemBom: {fileID: 1414366737}
+  personagemRuim: {fileID: 1205736161}
+  dialogoFinalBom: {fileID: 1672731038}
+  dialogoFinalRuim: {fileID: 1924526612}
+  nomeCenaMenu: MenuInicial
 --- !u!4 &848399719
 Transform:
   m_ObjectHideFlags: 0
@@ -436,6 +441,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1205736161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1878408239583518538, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+  m_PrefabInstance: {fileID: 816314930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1414366737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1878408239583518538, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+  m_PrefabInstance: {fileID: 1901071959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1672731038 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+  m_PrefabInstance: {fileID: 1901071959}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e3f9c33e71e4ce0846bcdfcff463e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1901071959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -575,6 +601,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8503345485452149380, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
   m_PrefabInstance: {fileID: 1901071959}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1924526612 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+  m_PrefabInstance: {fileID: 816314930}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e3f9c33e71e4ce0846bcdfcff463e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
