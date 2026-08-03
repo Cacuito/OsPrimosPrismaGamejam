@@ -2952,10 +2952,31 @@ MonoBehaviour:
   space: {fileID: 8888870}
   scriptDialogo: {fileID: 1399315213}
   player: {fileID: 1059017510}
-  dialogoNeutro: []
-  dialogoPosMinigameBom: []
-  dialogoPosMinigameRuim: []
-  dialogoPosComprarComida: []
+  dialogoNeutro:
+  - texto: " Demorei tanto tempo para me arrumar\u2026 Espero que esse festival valha
+      a pena."
+    falaDoJogador: 0
+  - texto: Voce esta sempre muito bonita, Iris.
+    falaDoJogador: 1
+  - texto: "Ah,  claro, eu sei disso. E voce\u2026? Bem, e rustico."
+    falaDoJogador: 0
+  - texto: Eu poderia te fazer companhia durante o festival?
+    falaDoJogador: 1
+  - texto: " \u2026..........."
+    falaDoJogador: 0
+  - texto: "Acho que a fuligem dessa fogueira vai sujar meu cabelo\u2026!"
+    falaDoJogador: 0
+  dialogoPosMinigameBom:
+  - texto: Esses Goblin sao tao divertidos! Adoro o barulho que eles fazem quando
+      voce aperta eles. Eu poderia ver a noite toda.
+    falaDoJogador: 0
+  dialogoPosMinigameRuim:
+  - texto: "Voce nao tem o minimo de empatia comigo, nao e? Pescar peixes?! Francamente\u2026"
+    falaDoJogador: 0
+  dialogoPosComprarComida:
+  - texto: "Oh! Acai com farinha e minha comida favorita no mundo, nao ha nada igual.
+      Voce consegue ser um doce quando decide pensar um pouco\u2026"
+    falaDoJogador: 0
 --- !u!212 &954109566
 SpriteRenderer:
   m_ObjectHideFlags: 0
