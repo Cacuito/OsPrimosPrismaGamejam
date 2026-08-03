@@ -33,6 +33,9 @@ public class GoblinGameManager : MonoBehaviour
 
     public void StartGame()
     {
+        MoralSystem.AdicionarMoral(10, "S");
+        MoralSystem.AdicionarMoral(-15, "G");
+
         playing = false;
 
         // Reset da pontuação da rodada atual

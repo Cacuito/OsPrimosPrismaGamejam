@@ -17,11 +17,15 @@ public class RecompensasManager : MonoBehaviour
     {
         public string name;
         public int custo;
+        public string id;
+        public bool éItemFinal;
 
-        public Item(string name, int custo)
+        public Item(string name, int custo, string id, bool éItemFinal)
         {
             this.name = name;
             this.custo = custo;
+            this.id = id;
+            this.éItemFinal = éItemFinal;
         }
     }
 
@@ -57,6 +61,19 @@ public class RecompensasManager : MonoBehaviour
     {
         if (ScoreManager.Pontos >= item.custo)
         {
+            if (!item.éItemFinal)
+            {
+                if (item.id == "D") MoralSystem.AdicionarMoral(10, item.id);
+                else if (item.id == "S") MoralSystem.AdicionarMoral(10, item.id);
+                else if (item.id == "G") MoralSystem.AdicionarMoral(10, item.id);
+            }
+            if (item.éItemFinal)
+            {
+                if (item.id == "D") SceneManager.LoadScene("CenaFinalD");
+                else if (item.id == "S") SceneManager.LoadScene("CenaFinalS");
+                else if (item.id == "G") SceneManager.LoadScene("CenaFinalG");
+            }
+
             ScoreManager.AdicionarPontos(-item.custo);
             texto.text = $"{item.name} comprado por {item.custo} pontos.";
             Debug.Log($"Item {item.name} comprado por {item.custo} pontos.");
