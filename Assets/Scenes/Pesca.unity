@@ -3573,13 +3573,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 655555611}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[0].texto
       value: Ola!! Bem-Vindo ao jogo de pescaria!
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[1].texto
-      value: "A vara vai ficar indo de um lado para o outro, aperte o bot\xE3o do
-        mouse para lan\xE7ar o anzol e pegar algum peixe!!!"
+      value: A vara vai ficar indo de um lado para o outro, aperte o botao do mouse
+        para lancar o anzol e pegar algum peixe!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.data[2].texto
+      value: "Aten\xE7ao a cor dos peixes! Os vermelhos s\xE3o mais raros e valem
+        30 pontos,"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.data[3].texto
+      value: Os amarelos um pouco mais comuns e valem 20 pontos,
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.data[4].texto
+      value: "E os azuis s\xE3o os mais comuns que tem, valendo apenas 10 pontos."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.data[5].texto
+      value: Boa diversao!
       objectReference: {fileID: 0}
     - target: {fileID: 6417359937968957889, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: m_Sprite

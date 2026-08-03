@@ -2326,7 +2326,7 @@ PrefabInstance:
       objectReference: {fileID: 77411611}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[0]
@@ -2351,15 +2351,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[1].texto
-      value: "As regras s\xE3o simples. A cada Goblin que voc\xEA acertar, voc\xEA
-        ganha 5 pontos."
+      value: "As regras sao simples. A cada Goblin que voce acertar, voc\xEA ganha
+        5 pontos."
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[2].texto
-      value: Caso acerte a bomba, o jogo acaba.
+      value: 'Uma dica: os vermelhos dao mais pontos!'
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[3].texto
+      value: Caso acerte a bomba, o jogo acaba.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.data[4].texto
       value: 'Ah! E nao se preocupe com os Goblins, a arma eh de borracha. '
       objectReference: {fileID: 0}
     - target: {fileID: 6417359937968957889, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
