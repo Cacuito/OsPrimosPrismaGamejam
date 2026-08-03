@@ -111,6 +111,7 @@ public class AcerteSlime : MonoBehaviour
         MoralSystem.AdicionarMoral(10, "G");
         MoralSystem.AdicionarMoral(-15, "D");
 
+        slimesParaSpawnar = quantidadeSlimes;
         scoreNaRodada = 0;
         gameUI.SetActive(true);
         timeRemaining = startingTime;
