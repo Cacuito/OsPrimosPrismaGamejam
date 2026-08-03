@@ -3587,16 +3587,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[2].texto
-      value: "Aten\xE7ao a cor dos peixes! Os vermelhos s\xE3o mais raros e valem
-        30 pontos,"
+      value: Atencao a cor dos peixes! Os vermelhos sao mais raros e valem 30 pontos.
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[3].texto
-      value: Os amarelos um pouco mais comuns e valem 20 pontos,
+      value: Os amarelos um pouco mais comuns e valem 20 pontos
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[4].texto
-      value: "E os azuis s\xE3o os mais comuns que tem, valendo apenas 10 pontos."
+      value: E os azuis sao os mais comuns que tem, valendo apenas 10 pontos.
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[5].texto
