@@ -21,6 +21,11 @@ public class NPC : MonoBehaviour
     [SerializeField] private Dialogo scriptDialogo;
     [SerializeField] private PlayerMoviment player;
 
+    [Header("Expressões Visuais do NPC")]
+    public Sprite spriteNeutro;
+    public Sprite spriteFeliz;
+    public Sprite spriteChateado;
+
     [Header("Diálogos do NPC")]
     public LinhaDialogo[] dialogoInicial;
     public LinhaDialogo[] dialogoIdle;
@@ -61,26 +66,46 @@ public class NPC : MonoBehaviour
             space.SetActive(false);
             player.podeMover = false;
 
+            // Define qual sprite será usado baseado no estado
+            Sprite spriteAtual = spriteNeutro; 
+
             switch (estadoAtual)
             {
                 case EstadoInteracaoNPC.MinigameBom:
-                    scriptDialogo.IniciarDialogo(dialogoPosMinigameBom);
-                    break;
-                case EstadoInteracaoNPC.MinigameNeutro:
-                    scriptDialogo.IniciarDialogo(dialogoPosMinigameNeutro);
+                case EstadoInteracaoNPC.ComprouComida:
+                    spriteAtual = spriteFeliz;
                     break;
                 case EstadoInteracaoNPC.MinigameRuim:
-                    scriptDialogo.IniciarDialogo(dialogoPosMinigameRuim);
+                    spriteAtual = spriteChateado;
+                    break;
+                case EstadoInteracaoNPC.MinigameNeutro:
+                case EstadoInteracaoNPC.Idle:
+                case EstadoInteracaoNPC.Inicial:
+                    spriteAtual = spriteNeutro;
+                    break;
+            }
+
+            // Inicia o diálogo passando o texto e a expressão visual correta
+            switch (estadoAtual)
+            {
+                case EstadoInteracaoNPC.MinigameBom:
+                    scriptDialogo.IniciarDialogo(dialogoPosMinigameBom, spriteAtual);
+                    break;
+                case EstadoInteracaoNPC.MinigameNeutro:
+                    scriptDialogo.IniciarDialogo(dialogoPosMinigameNeutro, spriteAtual);
+                    break;
+                case EstadoInteracaoNPC.MinigameRuim:
+                    scriptDialogo.IniciarDialogo(dialogoPosMinigameRuim, spriteAtual);
                     break;
                 case EstadoInteracaoNPC.ComprouComida:
-                    scriptDialogo.IniciarDialogo(dialogoPosComprarComida);
+                    scriptDialogo.IniciarDialogo(dialogoPosComprarComida, spriteAtual);
                     break;
                 case EstadoInteracaoNPC.Idle:
-                    scriptDialogo.IniciarDialogo(dialogoIdle);
+                    scriptDialogo.IniciarDialogo(dialogoIdle, spriteAtual);
                     break;
                 case EstadoInteracaoNPC.Inicial:
                 default:
-                    scriptDialogo.IniciarDialogo(dialogoInicial);
+                    scriptDialogo.IniciarDialogo(dialogoInicial, spriteAtual);
                     estadoAtual = EstadoInteracaoNPC.Idle;
                     break;
             }

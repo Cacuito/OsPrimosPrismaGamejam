@@ -674,6 +674,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1231782863}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &239463148 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+  m_PrefabInstance: {fileID: 2142131014}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e3f9c33e71e4ce0846bcdfcff463e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &251496968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,7 +2179,8 @@ Transform:
   m_LocalPosition: {x: 0.0148, y: -0.0133, z: 0}
   m_LocalScale: {x: 0.9282929, y: 0.9282929, z: 0.9282929}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1557213965}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1274613660
@@ -2285,9 +2297,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 626689469}
-  zoomSizeAlvo: 3
+  zoomSizeAlvo: 3.5
   velocidadeZoom: 2
-  centroDaBarraca: {fileID: 1328724896}
+  centroDaBarraca: {fileID: 1557213965}
 --- !u!4 &1328724896
 Transform:
   m_ObjectHideFlags: 0
@@ -2517,7 +2529,7 @@ Transform:
   m_GameObject: {fileID: 1455625163}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.66, y: 2.3, z: 0}
+  m_LocalPosition: {x: -0.59, y: 1.16, z: 0}
   m_LocalScale: {x: 0.726, y: 0.726, z: 0.726}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2826,6 +2838,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1557213964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1557213965}
+  m_Layer: 0
+  m_Name: CentroPesca
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1557213965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557213964}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1259495990}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1601623213
 GameObject:
   m_ObjectHideFlags: 0
@@ -2872,9 +2915,14 @@ MonoBehaviour:
   - {fileID: 1129029101}
   anzolScript: {fileID: 1761321498}
   playButton: {fileID: 270879611}
+  botaoSair: {fileID: 1429952060}
   gameUI: {fileID: 655555611}
   timeText: {fileID: 180805478}
   scoreText: {fileID: 439941665}
+  scriptDialogo: {fileID: 239463148}
+  dialogoInicial: []
+  zoomCameraSize: 3.5
+  velocidadeZoom: 2
   tempoDeJogo: 30
 --- !u!4 &1601623215
 Transform:
@@ -3552,6 +3600,14 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 655555611}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: npcBarraca
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: scriptDeZoom
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.size
       value: 6

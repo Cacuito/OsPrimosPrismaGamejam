@@ -9,11 +9,15 @@ public class GoblinGameManager : MonoBehaviour
 
     [Header("UI Objects")]
     [SerializeField] private GameObject playButton;
+    [SerializeField] private GameObject botaoSair;
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject outOfTimeText;
     [SerializeField] private GameObject bombText;
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private TextMeshProUGUI scoreText;
+
+    [Header("Diálogo")]
+    public Dialogo scriptDialogo;
 
     public float startingTime = 30f;
     private float timeRemaining;
@@ -21,6 +25,7 @@ public class GoblinGameManager : MonoBehaviour
     private bool playing = false;
 
     private int scoreNaRodada = 0;
+    private int pontosIniciais;
 
     void Start()
     {
@@ -28,6 +33,10 @@ public class GoblinGameManager : MonoBehaviour
         {
             scoreText.text = $"{ScoreManager.Pontos}";
         }
+
+        if (playButton != null) playButton.SetActive(true);
+        if (botaoSair != null) botaoSair.SetActive(true);
+        if (gameUI != null) gameUI.SetActive(false);
     }
 
     public void StartGame()
@@ -36,8 +45,8 @@ public class GoblinGameManager : MonoBehaviour
         MoralSystem.AdicionarMoral(-15, "G");
 
         playing = false;
-
         scoreNaRodada = 0;
+        pontosIniciais = ScoreManager.Pontos;
 
         for (int i = 0; i < goblins.Count; i++)
         {
@@ -47,10 +56,11 @@ public class GoblinGameManager : MonoBehaviour
 
         currentGoblins.Clear();
 
-        playButton.SetActive(false);
-        outOfTimeText.SetActive(false);
-        bombText.SetActive(false);
-        gameUI.SetActive(true);
+        if (playButton != null) playButton.SetActive(false);
+        if (botaoSair != null) botaoSair.SetActive(false);
+        if (outOfTimeText != null) outOfTimeText.SetActive(false);
+        if (bombText != null) bombText.SetActive(false);
+        if (gameUI != null) gameUI.SetActive(true);
 
         timeRemaining = startingTime;
 
@@ -66,11 +76,11 @@ public class GoblinGameManager : MonoBehaviour
     {
         if (type == 0)
         {
-            outOfTimeText.SetActive(true);
+            if (outOfTimeText != null) outOfTimeText.SetActive(true);
         }
         else
         {
-            bombText.SetActive(true);
+            if (bombText != null) bombText.SetActive(true);
         }
 
         foreach (GoblinScript goblin in goblins)
@@ -79,11 +89,41 @@ public class GoblinGameManager : MonoBehaviour
         }
 
         playing = false;
-        playButton.SetActive(true);
+        if (gameUI != null) gameUI.SetActive(false);
 
-        NPC.estadosGlobais["Sereia"] = EstadoInteracaoNPC.MinigameBom;
-        NPC.estadosGlobais["Golem"] = EstadoInteracaoNPC.MinigameRuim;
-        NPC.estadosGlobais["Dragótica"] = EstadoInteracaoNPC.MinigameNeutro;
+        int pontosGanhos = ScoreManager.Pontos - pontosIniciais;
+        string falaFinal = "";
+        EstadoInteracaoNPC resultadoMinigame;
+
+        if (pontosGanhos >= 100)
+        {
+            falaFinal = "Isso ai! Esses Goblins aprenderam a licao!";
+            resultadoMinigame = EstadoInteracaoNPC.MinigameBom;
+        }
+        else if (pontosGanhos > 50)
+        {
+            falaFinal = "Foi quase bom. Treine mais para ir melhor no proximo festival.";
+            resultadoMinigame = EstadoInteracaoNPC.MinigameNeutro;
+        }
+        else
+        {
+            falaFinal = "Parece que voce tem pena dos Goblin.  Nao precisa poupa-los, eles nem se machucam…";
+            resultadoMinigame = EstadoInteracaoNPC.MinigameRuim;
+        }
+
+        NPC.estadosGlobais["Dragótica"] = resultadoMinigame;
+        NPC.estadosGlobais["Sereia"] = EstadoInteracaoNPC.Idle;
+        NPC.estadosGlobais["Golem"] = EstadoInteracaoNPC.Idle;
+
+        if (scriptDialogo != null)
+        {
+            scriptDialogo.IniciarDialogoPosJogo(falaFinal, playButton, botaoSair);
+        }
+        else
+        {
+            if (playButton != null) playButton.SetActive(true);
+            if (botaoSair != null) botaoSair.SetActive(true);
+        }
     }
 
     void Update()
@@ -127,7 +167,6 @@ public class GoblinGameManager : MonoBehaviour
             scoreText.text = $"{ScoreManager.Pontos}";
         }
 
-       // timeRemaining += 1f;
         currentGoblins.Remove(goblins[goblinIndex]);
     }
 

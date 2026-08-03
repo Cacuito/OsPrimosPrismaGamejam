@@ -11,13 +11,20 @@ public class PescaManager : MonoBehaviour
     public GameObject[] spawns;
 
     [Header("Referências da Partida")]
-    public AnzolPesca anzolScript; // Arraste o GameObject do Anzol que possui o script AnzolPesca
+    public AnzolPesca anzolScript; 
 
     [Header("Interface da UI")]
     public GameObject playButton;
+    public GameObject botaoSair; 
     public GameObject gameUI;
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI scoreText;
+
+    [Header("Diálogo e Câmera")]
+    public Dialogo scriptDialogo;
+    public LinhaDialogo[] dialogoInicial;
+    public float zoomCameraSize = 3.5f; 
+    public float velocidadeZoom = 2f;
 
     [Header("Configurações da Partida")]
     public float tempoDeJogo = 30f;
@@ -25,6 +32,9 @@ public class PescaManager : MonoBehaviour
     private float tempoRestante;
     private bool jogando = false;
     private Coroutine corrotinaSpawns;
+
+    private int pontosIniciais; 
+    private float tamanhoCameraOriginal;
 
     void Start()
     {
@@ -34,7 +44,13 @@ public class PescaManager : MonoBehaviour
         }
 
         if (playButton != null) playButton.SetActive(true);
+        if (botaoSair != null) botaoSair.SetActive(true);
         if (gameUI != null) gameUI.SetActive(false);
+
+        if (Camera.main != null)
+        {
+            tamanhoCameraOriginal = Camera.main.orthographicSize;
+        }
     }
 
     void Update()
@@ -61,15 +77,79 @@ public class PescaManager : MonoBehaviour
         }
     }
 
-    public void StartGame()
+    public void AoClicarEmJogar()
+    {
+        if (playButton != null) playButton.SetActive(false);
+        if (botaoSair != null) botaoSair.SetActive(false);
+        
+        StartCoroutine(RotinaInicialEZoom());
+    }
+
+    private IEnumerator RotinaInicialEZoom()
+    {
+        Debug.Log("1. Rotina de Zoom Iniciada. Esperando diálogo...");
+
+        if (scriptDialogo != null && dialogoInicial != null && dialogoInicial.Length > 0)
+        {
+            scriptDialogo.IniciarDialogo(dialogoInicial);
+            yield return new WaitUntil(() => !scriptDialogo.gameObject.activeInHierarchy);
+        }
+
+        Debug.Log("2. Diálogo concluído. Verificando Câmera...");
+
+        if (Camera.main != null)
+        {
+            float tamanhoAtual = Camera.main.orthographicSize;
+            float t = 0f;
+
+            Debug.Log($"3. Câmera encontrada! Tamanho atual: {tamanhoAtual} | Indo para: {zoomCameraSize}");
+
+            while (t < 1f)
+            {
+                // Usando unscaledDeltaTime para ignorar se o jogo estiver pausado (TimeScale = 0)
+                t += Time.unscaledDeltaTime * velocidadeZoom;
+                Camera.main.orthographicSize = Mathf.Lerp(tamanhoAtual, zoomCameraSize, t);
+                yield return null;
+            }
+            Camera.main.orthographicSize = zoomCameraSize;
+            Debug.Log("4. Zoom In concluído com sucesso!");
+        }
+        else
+        {
+            Debug.LogError("ERRO: Camera.main não foi encontrada. Verifique se a câmera tem a tag 'MainCamera'.");
+        }
+
+        StartGame();
+    }
+
+    private IEnumerator RotinaZoomOut()
+    {
+        if (Camera.main != null)
+        {
+            float tamanhoAtual = Camera.main.orthographicSize;
+            float t = 0f;
+
+            while (t < 1f)
+            {
+                t += Time.unscaledDeltaTime * velocidadeZoom;
+                Camera.main.orthographicSize = Mathf.Lerp(tamanhoAtual, tamanhoCameraOriginal, t);
+                yield return null;
+            }
+            Camera.main.orthographicSize = tamanhoCameraOriginal;
+        }
+    }
+
+    private void StartGame()
     {
         MoralSystem.AdicionarMoral(10, "D");
         MoralSystem.AdicionarMoral(-15, "S");
 
+        pontosIniciais = ScoreManager.Pontos; 
         tempoRestante = tempoDeJogo;
         jogando = true;
 
         if (playButton != null) playButton.SetActive(false);
+        if (botaoSair != null) botaoSair.SetActive(false);
         if (gameUI != null) gameUI.SetActive(true);
 
         if (anzolScript != null)
@@ -85,23 +165,43 @@ public class PescaManager : MonoBehaviour
     {
         jogando = false;
 
-        if (corrotinaSpawns != null)
-        {
-            StopCoroutine(corrotinaSpawns);
-        }
-
-        if (anzolScript != null)
-        {
-            anzolScript.BloquearAnzol();
-        }
+        if (corrotinaSpawns != null) StopCoroutine(corrotinaSpawns);
+        if (anzolScript != null) anzolScript.BloquearAnzol();
 
         LimparPeixesDaTela();
+        if (gameUI != null) gameUI.SetActive(false);
 
-        if (playButton != null) playButton.SetActive(true);
+        StartCoroutine(RotinaZoomOut());
+
+        int pontosGanhos = ScoreManager.Pontos - pontosIniciais;
+        string falaFinal = "";
+
+        if (pontosGanhos >= 100)
+        {
+            falaFinal = $" Nossa! Macacos me mordam, voce é um eximio pescador!";
+        }
+        else if (pontosGanhos > 50)
+        {
+            falaFinal = $"Boa pescaria marujo, voce foi bem nessa.";
+        }
+        else
+        {
+            falaFinal = "Poxa… Tenta de novo, na proxima voce consegue!";
+        }
 
         NPC.estadosGlobais["Sereia"] = EstadoInteracaoNPC.MinigameRuim;
         NPC.estadosGlobais["Golem"] = EstadoInteracaoNPC.MinigameNeutro;
         NPC.estadosGlobais["Dragótica"] = EstadoInteracaoNPC.MinigameBom;
+
+        if (scriptDialogo != null)
+        {
+            scriptDialogo.IniciarDialogoPosJogo(falaFinal, playButton, botaoSair);
+        }
+        else
+        {
+            if (playButton != null) playButton.SetActive(true);
+            if (botaoSair != null) botaoSair.SetActive(true);
+        }
     }
 
     private IEnumerator SpawnPeixesRoutine()

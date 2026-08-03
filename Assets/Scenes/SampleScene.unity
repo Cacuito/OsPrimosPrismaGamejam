@@ -1581,6 +1581,9 @@ MonoBehaviour:
   space: {fileID: 8888870}
   scriptDialogo: {fileID: 99203551}
   player: {fileID: 1059017510}
+  spriteNeutro: {fileID: 21300000, guid: b23a02029d85d2f42a6a56e2f07529ff, type: 3}
+  spriteFeliz: {fileID: 21300000, guid: 6cd58be9dcb356746b856a9be2661696, type: 3}
+  spriteChateado: {fileID: 21300000, guid: 3c142fa24780364459701e88b8f66035, type: 3}
   dialogoInicial:
   - texto: " Oi, oi, todos parecem tao preparados para o festival, nao eh? Voce esta\u2026
       eu digo, bem, muito bem, nada mal mesmo."
@@ -3200,6 +3203,9 @@ MonoBehaviour:
   space: {fileID: 8888870}
   scriptDialogo: {fileID: 1399315213}
   player: {fileID: 1059017510}
+  spriteNeutro: {fileID: 21300000, guid: fccb1233f749e1c49a801540944f7d61, type: 3}
+  spriteFeliz: {fileID: 21300000, guid: ae19386998ff2f34a9a2489abb7c9acd, type: 3}
+  spriteChateado: {fileID: 21300000, guid: 6862a0516f0554d49aa4fc031010a6f5, type: 3}
   dialogoInicial:
   - texto: " Demorei tanto tempo para me arrumar\u2026 Espero que esse festival valha
       a pena."
@@ -5944,6 +5950,9 @@ MonoBehaviour:
   space: {fileID: 0}
   scriptDialogo: {fileID: 0}
   player: {fileID: 0}
+  spriteNeutro: {fileID: 0}
+  spriteFeliz: {fileID: 0}
+  spriteChateado: {fileID: 0}
   dialogoInicial: []
   dialogoIdle: []
   dialogoPosMinigameBom: []
@@ -6146,6 +6155,9 @@ MonoBehaviour:
   space: {fileID: 8888870}
   scriptDialogo: {fileID: 1104699375}
   player: {fileID: 1059017510}
+  spriteNeutro: {fileID: 21300000, guid: 658b1404009909644b1cb2b73b4225a4, type: 3}
+  spriteFeliz: {fileID: 21300000, guid: 04a093d4a5edc8b45aa3d1d9848c9642, type: 3}
+  spriteChateado: {fileID: 21300000, guid: ed9bfffd101232048881ca2650a7bad1, type: 3}
   dialogoInicial:
   - texto: ' Como ousa chegar ate a herdeira do deus Vermelho?'
     falaDoJogador: 0
