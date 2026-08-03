@@ -5474,7 +5474,6 @@ MonoBehaviour:
   space: {fileID: 0}
   scriptDialogo: {fileID: 0}
   player: {fileID: 0}
-  dialogoNeutro: []
   dialogoInicial: []
   dialogoIdle: []
   dialogoPosMinigameBom: []
