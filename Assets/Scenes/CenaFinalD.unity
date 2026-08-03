@@ -319,13 +319,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.b
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.g
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.r
+      value: 0.19215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[0].texto
-      value: "Oh\u2026 esse livro\u2026 muito bom, mas n\xE3o vou devo ser vista
-        com voc\xEA."
+      value: "Oh\u2026 esse livro\u2026 muito bom, mas nao vou devo ser vista com
+        voce."
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[1].texto
-      value: "Com licen\xE7a."
+      value: Com licenca.
       objectReference: {fileID: 0}
     - target: {fileID: 6417359937968957889, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: m_Sprite
@@ -434,12 +446,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.b
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.g
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.r
+      value: 0.19215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[0].texto
       value: ' O Livro de Feiticos edicao limitada das bruxas!! Para mim?!'
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[1].texto
       value: Acho que tu es digno de ser minha companhia nessa festinha.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.data[2].texto
+      value: :3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.data[2].falaDoJogador
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6417359937968957889, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: m_Sprite

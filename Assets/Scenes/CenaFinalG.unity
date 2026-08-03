@@ -272,8 +272,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.b
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.g
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.r
+      value: 0.19215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[0].texto
-      value: "E-E lindo, o presente, sim\u2026 mas, ah, \xE9 tao dificil dizer isso\u2026\r\n"
+      value: "E-E lindo, o presente, sim\u2026 mas, ah, eh tao dificil dizer isso\u2026\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[1].texto
@@ -437,21 +449,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.b
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.g
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: corJogador.r
+      value: 0.19215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[0].texto
-      value: "Um\u2026 Um Coracao de Barro? Para mim? Serio?"
+      value: " Um\u2026 Um Coracao de Barro? Para mim? Serio?"
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[1].texto
-      value: "E-Eu devo estar sonhando\u2026 que lindo! Muito obrigado, obrigado
+      value: " E-Eu devo estar sonhando\u2026 que lindo! Muito obrigado, obrigado
         mesmo."
       objectReference: {fileID: 0}
     - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: falas.Array.data[2].texto
-      value: Eu adoraria ser sua companhia.
+      value: ' Eu adoraria ser sua companhia.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.data[3].texto
+      value: :3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320098111924348695, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
+      propertyPath: falas.Array.data[3].falaDoJogador
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6417359937968957889, guid: d04941624338041d58b8ab5da25a1d35, type: 3}
       propertyPath: m_Sprite
