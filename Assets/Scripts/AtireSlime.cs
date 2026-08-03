@@ -158,15 +158,15 @@ public class AcerteSlime : MonoBehaviour
         
         if (scoreNaRodada >= 100)
         {
-            falaFinal = "UAU!! Pelo os meus cálculos desse jeito não vou ter mais pontos/moedas para distribuir para os outros.";
+            falaFinal = "UAU!! Pelo os meus calculos desse jeito nao vou ter mais pontos para distribuir para os outros.";
         }
         else if (scoreNaRodada > 50)
         {
-            falaFinal = "Boa! Mesmo não sendo o máximo, acho que essa quantidade de pontos/moedas já é suficiente! He He.";
+            falaFinal = "Boa! Mesmo nao sendo o maximo, acho que essa quantidade de pontos ja eh suficiente! He He.";
         }
         else
         {
-            falaFinal = "Eh... tenho certeza que você poderia ter ido melhor! Só não foi seu dia de sorte.";
+            falaFinal = "Eh... tenho certeza que voce poderia ter ido melhor! So nao foi seu dia de sorte.";
         }
 
         NPC.estadosGlobais["Sereia"] = EstadoInteracaoNPC.MinigameNeutro;
